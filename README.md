@@ -11,6 +11,8 @@ Aggregation supports for meteor
     People = new Meteor.Collection("people");
     
     if(Meteor.isClient){
+    
+      // creates pipe
       var pipe = [];
       
       pipe.push({
@@ -30,9 +32,14 @@ Aggregation supports for meteor
         }
       });
     
+      // excute aggregation
       People.aggregate(pipe, function(err, docs){
         if(docs){
           Session.set("result", docs);
         }
       });
     }
+
+### Warning
+
+This project is very experimental. I'm just testing meteor packaging system.
