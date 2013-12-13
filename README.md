@@ -48,3 +48,4 @@ Aggregation supports for meteor.
 ### Warning
 
 This project is very experimental. I'm just testing meteor packaging system.
+Result documents are *not reactive*! 
