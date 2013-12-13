@@ -5,6 +5,5 @@
   "author": "Jeeeyul <jeeeyul@gmail.com>",
   "version": "0.0.0.1",
   "git": "https://github.com/jeeeyul/meteor-aggregation.git",
-  "packages": {
-  }
+  "packages": {}
 }
