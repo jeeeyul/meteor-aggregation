@@ -7,7 +7,9 @@
 </body>
 
 <template name="hello">
-  <h1>Hello World!</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
+  <input type="button" value="Test Aggregate" id="test-aggregation-button" />
+  {{#each stat}}
+  	{{_id}}
+  	{{count}}
+  {{/each}}
 </template>
