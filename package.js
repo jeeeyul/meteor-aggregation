@@ -1,5 +1,5 @@
 Package.describe({
-	summary : "엇따 테스트랑께"
+	summary : "Supports aggregation for Meteor"
 });
 
 Npm.depends({
