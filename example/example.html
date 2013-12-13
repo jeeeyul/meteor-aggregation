@@ -8,8 +8,9 @@
 
 <template name="hello">
   <input type="button" value="Test Aggregate" id="test-aggregation-button" />
+  <ul>
   {{#each stat}}
-  	{{_id}}
-  	{{count}}
+  	<li>{{_id}} is liked {{count}} times.</li>
   {{/each}}
+  </ul>
 </template>
