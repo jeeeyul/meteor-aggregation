@@ -1,0 +1,15 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "aggregation": {}
+    },
+    "packages": {
+      "aggregation": {
+        "git": "https://github.com/jeeeyul/meteor-aggregation.git",
+        "tag": "v0.0.1",
+        "commit": "1632dd3db9fa704095d6f4b7f6c00e21ab0a2985"
+      }
+    }
+  }
+}
