@@ -1,6 +1,6 @@
 meteor-aggregation
 ==================
-Aggregation supports for meteor
+Aggregation supports for meteor.
 
 ### How to Install
 
@@ -32,7 +32,7 @@ Aggregation supports for meteor
         }
       });
     
-      // excute aggregation
+      // excute aggregation (It can be called in only client side)
       People.aggregate(pipe, function(err, docs){
         if(docs){
           Session.set("result", docs);
