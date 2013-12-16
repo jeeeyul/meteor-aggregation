@@ -8,7 +8,7 @@ Npm.depends({
 });
 
 Package.on_use(function(api, where) {
-	api.use([ "livedata" ], [ "client", "server" ]);
+	api.use([ "livedata", "mongo-livedata" ], [ "client", "server" ]);
 	
 	var path = Npm.require('path');
 	api.add_files(path.join("lib", "server.js"), "server");
