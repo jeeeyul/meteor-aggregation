@@ -42,6 +42,7 @@ A Pipe can be created like below:
                     $sum : 1
                 }
             }
+        }
     });
 
 ### Demo
