@@ -8,37 +8,41 @@ Aggregation supports for meteor.
     
 ### Usage
 
+Client Usage (CBP is required):
+
     People = new Meteor.Collection("people");
-    
-    if(Meteor.isClient){
-    
-      // creates pipe
-      var pipe = [];
-      
-      pipe.push({
-        $match : {
-          favoriteColor : {
-            $exists : 1
-          }
-        }
-      });
-      
-      pipe.push({
-        $group : {
-          _id : "favoriteColor",
-          count : {
-            $sum : 1
-          }
-        }
-      });
-    
-      // excute aggregation (It can be called in only client side)
-      People.aggregate(pipe, function(err, docs){
+    People.aggregate(pipe, function(err, docs){
         if(docs){
-          Session.set("result", docs);
+            Session.set("result", docs);
         }
-      });
-    }
+    });
+    
+Server Side Usage:
+
+    People = new Meteor.Collection("people");
+    var docs = People.aggregate(pipe);
+    
+A Pipe can be created like below:
+
+    // creates pipe
+    var pipe = [];
+      
+    pipe.push({
+        $match : {
+            favoriteColor : {
+                $exists : 1
+            }
+        }
+    });
+      
+    pipe.push({
+        $group : {
+            _id : "favoriteColor",
+                count : {
+                    $sum : 1
+                }
+            }
+    });
 
 ### Demo
 
