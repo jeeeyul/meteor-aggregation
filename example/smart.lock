@@ -11,7 +11,7 @@
       "aggregation": {
         "git": "https://github.com/Jeeeyul/meteor-aggregation",
         "branch": "master",
-        "commit": "c917cb3d70fb78a0bef2a028ef8b8ca1095f9dc4"
+        "commit": "f5d5ad88daf7c3bfdbb74dd4a1be5ee13f9dbbd5"
       }
     }
   }
