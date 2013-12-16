@@ -8,10 +8,9 @@ Npm.depends({
 });
 
 Package.on_use(function(api, where) {
-	api.imply(["livedata"], "[client", "server"]);
-	
+	api.imply([ "livedata" ], [ "client", "server" ]);
+
 	var path = Npm.require('path');
 	api.add_files(path.join("lib", "server.js"), "server");
 	api.add_files(path.join("lib", "client.js"), "client");
 });
-
