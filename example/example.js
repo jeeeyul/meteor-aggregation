@@ -1,12 +1,14 @@
-People = new Meteor.Collection("people"); 
+People = new Meteor.Collection("people");
 
 if (Meteor.isClient) {
-	Template.hello.stat = function(){
+	Template.hello.stat = function() {
 		return Session.get("stat");
 	};
-	
+
 	Template.hello.events({
-		"click #test-aggregation-button" : function(){
+		"click #test-aggregation-button" : function() {
+			$("#test-aggregation-button").prop("disabled", true).val("wait...");
+			
 			var pipe = [];
 			pipe.push({
 				$group : {
@@ -16,11 +18,12 @@ if (Meteor.isClient) {
 					}
 				}
 			});
-			
-			People.aggregate(pipe, function(err, docs){
-				if(docs){
+
+			People.aggregate(pipe, function(err, docs) {
+				if (docs) {
 					Session.set("stat", docs);
 				}
+				$("#test-aggregation-button").prop("disabled", false).val("Test Aggregate");
 			});
 		}
 	});
@@ -28,7 +31,7 @@ if (Meteor.isClient) {
 
 if (Meteor.isServer) {
 	Meteor.startup(function() {
-		if(People.find().count() == 0){
+		if (People.find().count() == 0) {
 			People.insert({
 				"name" : "jeeeyul",
 				"favoriteColor" : "red"

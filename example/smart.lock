@@ -7,8 +7,8 @@
     "packages": {
       "aggregation": {
         "git": "https://github.com/jeeeyul/meteor-aggregation.git",
-        "tag": "v0.0.0.1",
-        "commit": "a0a3a55b8d7f2f855a8af9f79897a65c70433d50"
+        "tag": "v0.0.0.2",
+        "commit": "dea25593ae911c0a9f13c01ec075278d3efeb4fc"
       }
     }
   }
