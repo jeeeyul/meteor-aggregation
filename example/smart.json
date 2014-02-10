@@ -1,7 +1,7 @@
 {
   "packages": {
     "aggregation": {
-     	"git": "https://github.com/Jeeeyul/meteor-aggregation",
+     	"git": "https://github.com/jeeeyul/meteor-aggregation",
     	"branch" : "master"
     }
   }
